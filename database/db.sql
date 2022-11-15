@@ -1,0 +1,15 @@
+CREATE DATABASE nextcrud IF NOT EXISTS;
+
+USE nextcrud;
+
+CREATE TABLE IF NOT EXISTS product (
+  id SERIAL,
+  name VARCHAR(255) NOT NULL,
+  description TEXT NOT NULL,
+  price DECIMAL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  deleted_at TIMESTAMP DEFAULT NULL
+);
+
+\d product;
